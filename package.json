@@ -1,0 +1,22 @@
+{
+  "name": "bot-mail-netflix",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.22.0",
+  "dependencies": {
+    "cheerio": "^1.1.2",
+    "dotenv": "^17.2.3",
+    "imapflow": "^1.1.1",
+    "mailparser": "^3.9.0",
+    "node-fetch": "^3.3.2",
+    "puppeteer": "^24.31.0"
+  }
+}

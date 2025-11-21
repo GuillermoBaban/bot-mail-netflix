@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  bot-mail-netflix:
+    build: .
+    container_name: bot-mail-netflix
+    restart: unless-stopped
+    environment:
+      - IMAP_USER=${IMAP_USER}
+      - IMAP_PASS=${IMAP_PASS}
+      - IMAP_HOST=${IMAP_HOST:-imap.gmail.com}
+      - IMAP_PORT=${IMAP_PORT:-993}
+    env_file:
+      - .env
+    # Ejecutar cada 10 segundos con un loop
+    command: sh -c "while true; do node index.js; sleep 10; done"
+    volumes:
+      - ./logs:/app/logs
