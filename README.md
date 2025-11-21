@@ -52,4 +52,4 @@ docker-compose restart
 
 ## Funcionamiento
 
-El bot se ejecuta cada **10 segundos** automáticamente dentro del contenedor, revisando si hay nuevos correos de Netflix para confirmar el Household.
+El bot se ejecuta cada **2 minutos** automáticamente dentro del contenedor, revisando si hay nuevos correos de Netflix para confirmar el Household.
