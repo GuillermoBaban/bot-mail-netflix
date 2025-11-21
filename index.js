@@ -75,6 +75,7 @@ async function main() {
 
       if (!targetHref) {
         console.log('No se encontró el enlace de confirmación');
+        await client.messageFlagsAdd(lastSeq, ['\\Seen']);
         return;
       }
 
