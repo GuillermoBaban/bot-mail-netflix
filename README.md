@@ -29,7 +29,7 @@ IMAP_PASS=tu-contraseña-app-gmail
 ### Construir y ejecutar:
 
 ```bash
-docker-compose up -d
+docker-compose up -d --build
 ```
 
 ### Ver logs:
