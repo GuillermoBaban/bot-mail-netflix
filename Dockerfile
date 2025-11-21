@@ -32,12 +32,12 @@ ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
 # Crear directorio de trabajo
 WORKDIR /app
 
-# Copiar package.json y lock file
-COPY package.json pnpm-lock.yaml ./
+# Copiar package.json
+COPY package.json ./
 
 # Instalar pnpm y dependencias
 RUN npm install -g pnpm@10.22.0 && \
-    pnpm install --frozen-lockfile
+    pnpm install
 
 # Copiar el código de la aplicación
 COPY index.js ./
